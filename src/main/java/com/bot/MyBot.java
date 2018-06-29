@@ -44,10 +44,14 @@ public class MyBot extends TelegramLongPollingBot{
 		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
 		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
 		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+		
+		String tmp= game.getName();
+		if(tmp.length()>20)
+			tmp = tmp.substring(0, 20)+"...";
 
-		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
-		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
-		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
+		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_owned"));
+		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_like"));
+		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_discard"));
 		
 		keyboard.add(buttons);
 		
@@ -60,8 +64,12 @@ public class MyBot extends TelegramLongPollingBot{
 		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
 		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
 
-		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_like"));
-		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_discard"));
+		String tmp= song.getName();
+		if(tmp.length()>20)
+			tmp = tmp.substring(0, 20)+"...";
+		
+		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_like"));
+		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_discard"));
 		
 		keyboard.add(buttons);
 		
@@ -288,9 +296,13 @@ public class MyBot extends TelegramLongPollingBot{
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
 
-    		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
-    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_removelike"));
-    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
+    		String tmp= game.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
+    		
+    		//buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_removelike"));
+    		//buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -320,9 +332,13 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
-
-    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_removelike"));
-    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_discard"));
+    		
+    		String tmp= song.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
+    		
+    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_removelike"));
+    		//buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_discard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -352,9 +368,13 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= artist.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_removelike"));
-    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_discard"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove like").setCallbackData("artist_"+artist.getIdArtist()+"_"+tmp+"_removelike"));
+    		//buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_discard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -382,10 +402,14 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= game.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Remove owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_removeowned"));
-    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
-    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove owned").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_removeowned"));
+    		//buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
+    		//buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -412,10 +436,14 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= game.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
-    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
-    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_removediscard"));
+    		//buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
+    		//buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_removediscard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -443,9 +471,13 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= song.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_like"));
-    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_removediscard"));
+    		//buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_like"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_removediscard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -473,9 +505,13 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= artist.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_like"));
-    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_removediscard"));
+    		//buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_like"));
+    		buttons.add(new InlineKeyboardButton().setText("Remove discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+tmp+"_removediscard"));
     		buttons.add(new InlineKeyboardButton().setText("Cancel").setCallbackData("cancel"));
     		
     		keyboard.add(buttons);
@@ -520,10 +556,14 @@ public class MyBot extends TelegramLongPollingBot{
     		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
     		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
     		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+    		
+    		String tmp= game.getName();
+    		if(tmp.length()>20)
+    			tmp = tmp.substring(0, 20)+"...";
 
-    		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_owned"));
-    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_like"));
-    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+game.getName()+"_discard"));
+    		buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_owned"));
+    		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_like"));
+    		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("game_"+game.getAppId()+"_"+tmp+"_discard"));
     		
     		keyboard.add(buttons);
     		
@@ -549,10 +589,14 @@ public class MyBot extends TelegramLongPollingBot{
 		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
 		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
 		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+		
+		String tmp= song.getName();
+		if(tmp.length()>20)
+			tmp = tmp.substring(0, 20)+"...";
 
 		//buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_owned"));
-		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_like"));
-		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+song.getName()+"_discard"));
+		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_like"));
+		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("song_"+song.getIdSong()+"_"+tmp+"_discard"));
 		
 		keyboard.add(buttons);
 		
@@ -577,10 +621,14 @@ public class MyBot extends TelegramLongPollingBot{
 		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
 		List<List<InlineKeyboardButton>> keyboard = new ArrayList<List<InlineKeyboardButton>>();
 		List<InlineKeyboardButton> buttons = new ArrayList<InlineKeyboardButton>();
+		
+		String tmp= artist.getName();
+		if(tmp.length()>20)
+			tmp = tmp.substring(0, 20)+"...";
 
 		//buttons.add(new InlineKeyboardButton().setText("Owned").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_owned"));
-		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_like"));
-		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+artist.getName()+"_discard"));
+		buttons.add(new InlineKeyboardButton().setText("Like").setCallbackData("artist_"+artist.getIdArtist()+"_"+tmp+"_like"));
+		buttons.add(new InlineKeyboardButton().setText("Discard").setCallbackData("artist_"+artist.getIdArtist()+"_"+tmp+"_discard"));
 		
 		keyboard.add(buttons);
 		
@@ -743,7 +791,7 @@ public class MyBot extends TelegramLongPollingBot{
             
             if (splitted.contains("song")&&splitted.contains("like")) {
             	User u = musicservice.getUser(user);
-            	Song song = musicservice.getSong(splitted.get(2));
+            	Song song = musicservice.getSongById(splitted.get(1));
                 String answer = "You like "+splitted.get(2)+", ty!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -760,7 +808,7 @@ public class MyBot extends TelegramLongPollingBot{
             
             if (splitted.contains("artist")&&splitted.contains("like")) {
             	User u = musicservice.getUser(user);
-            	Artist artist = musicservice.getArtist(splitted.get(2));
+            	Artist artist = musicservice.getArtistById(splitted.get(1));
                 String answer = "You like "+splitted.get(2)+", ty!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -793,7 +841,7 @@ public class MyBot extends TelegramLongPollingBot{
             
             if (splitted.contains("song")&&splitted.contains("discard")) {
             	User u = musicservice.getUser(user);
-            	Song song = musicservice.getSong(splitted.get(2));
+            	Song song = musicservice.getSongById(splitted.get(1));
                 String answer = "You dont't like "+splitted.get(2)+", me too ;)";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -810,7 +858,7 @@ public class MyBot extends TelegramLongPollingBot{
             
             if (splitted.contains("artist")&&splitted.contains("discard")) {
             	User u = musicservice.getUser(user);
-            	Artist artist = musicservice.getArtist(splitted.get(2));
+            	Artist artist = musicservice.getArtistById(splitted.get(1));
                 String answer = "You don't like "+splitted.get(2)+", me too ;)";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -858,7 +906,8 @@ public class MyBot extends TelegramLongPollingBot{
 
             if (splitted.contains("song")&&splitted.contains("removelike")) {
             	User u = musicservice.getUser(user);
-            	Song song = musicservice.getSong(splitted.get(2));
+            	System.out.println(splitted.get(2));
+            	Song song = musicservice.getSongById(splitted.get(1));
                 String answer = "You don't like "+splitted.get(2)+" anymore!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -873,7 +922,7 @@ public class MyBot extends TelegramLongPollingBot{
             }
             if (splitted.contains("artist")&&splitted.contains("removelike")) {
             	User u = musicservice.getUser(user);
-            	Artist artist = musicservice.getArtist(splitted.get(2));
+            	Artist artist = musicservice.getArtistById(splitted.get(1));
                 String answer = "You don't like "+splitted.get(2)+" anymore!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -905,7 +954,7 @@ public class MyBot extends TelegramLongPollingBot{
             
             if (splitted.contains("song")&&splitted.contains("removediscard")) {
             	User u = musicservice.getUser(user);
-            	Song song = musicservice.getSong(splitted.get(2));
+            	Song song = musicservice.getSongById(splitted.get(1));
                 String answer = "You don't like "+splitted.get(2)+" anymore!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -920,7 +969,7 @@ public class MyBot extends TelegramLongPollingBot{
             }
             if (splitted.contains("artist")&&splitted.contains("removediscard")) {
             	User u = musicservice.getUser(user);
-            	Artist artist = musicservice.getArtist(splitted.get(2));
+            	Artist artist = musicservice.getArtistById(splitted.get(1));
                 String answer = "You don't like "+splitted.get(2)+" anymore!";
                 EditMessageText new_message = new EditMessageText()
                         .setChatId(chatId)
@@ -952,6 +1001,8 @@ public class MyBot extends TelegramLongPollingBot{
 		for(User user : users) {
 			long chatId = Long.parseLong(user.getChatId());
 			List<Game> games = recombee.showBookmarks(user.getId());
+			if(games.size()<1)
+				return;
 			int randomGame = (new Random()).nextInt(games.size());
 			System.out.println("games: "+games.size());
 			System.out.println("randomgames: "+randomGame);
