@@ -1,1 +1,1 @@
-web: java -jar target/TelegramBotJar.jar
+web: java -jar TelegramBotJar-jar-with-dependencies.jar
