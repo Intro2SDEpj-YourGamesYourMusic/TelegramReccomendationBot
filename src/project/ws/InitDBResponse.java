@@ -34,7 +34,7 @@ public class InitDBResponse {
     protected String string;
 
     /**
-     * Recupera il valore della proprietà string.
+     * Recupera il valore della proprieta string.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class InitDBResponse {
     }
 
     /**
-     * Imposta il valore della proprietà string.
+     * Imposta il valore della proprieta string.
      * 
      * @param value
      *     allowed object is

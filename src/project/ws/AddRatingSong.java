@@ -40,7 +40,7 @@ public class AddRatingSong {
     protected boolean arg2;
 
     /**
-     * Recupera il valore della proprietà arg0.
+     * Recupera il valore della proprieta arg0.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class AddRatingSong {
     }
 
     /**
-     * Imposta il valore della proprietà arg0.
+     * Imposta il valore della proprieta arg0.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class AddRatingSong {
     }
 
     /**
-     * Recupera il valore della proprietà arg1.
+     * Recupera il valore della proprieta arg1.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class AddRatingSong {
     }
 
     /**
-     * Imposta il valore della proprietà arg1.
+     * Imposta il valore della proprieta arg1.
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class AddRatingSong {
     }
 
     /**
-     * Recupera il valore della proprietà arg2.
+     * Recupera il valore della proprieta arg2.
      * 
      */
     public boolean isArg2() {
@@ -96,7 +96,7 @@ public class AddRatingSong {
     }
 
     /**
-     * Imposta il valore della proprietà arg2.
+     * Imposta il valore della proprieta arg2.
      * 
      */
     public void setArg2(boolean value) {

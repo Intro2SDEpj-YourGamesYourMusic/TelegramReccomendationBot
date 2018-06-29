@@ -46,7 +46,7 @@ public class UserLikes {
     protected User user;
 
     /**
-     * Recupera il valore della proprietà artist.
+     * Recupera il valore della proprieta artist.
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class UserLikes {
     }
 
     /**
-     * Imposta il valore della proprietà artist.
+     * Imposta il valore della proprieta artist.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class UserLikes {
     }
 
     /**
-     * Recupera il valore della proprietà idRelation.
+     * Recupera il valore della proprieta idRelation.
      * 
      */
     public int getIdRelation() {
@@ -78,7 +78,7 @@ public class UserLikes {
     }
 
     /**
-     * Imposta il valore della proprietà idRelation.
+     * Imposta il valore della proprieta idRelation.
      * 
      */
     public void setIdRelation(int value) {
@@ -86,7 +86,7 @@ public class UserLikes {
     }
 
     /**
-     * Recupera il valore della proprietà rating.
+     * Recupera il valore della proprieta rating.
      * 
      */
     public boolean isRating() {
@@ -94,7 +94,7 @@ public class UserLikes {
     }
 
     /**
-     * Imposta il valore della proprietà rating.
+     * Imposta il valore della proprieta rating.
      * 
      */
     public void setRating(boolean value) {
@@ -102,7 +102,7 @@ public class UserLikes {
     }
 
     /**
-     * Recupera il valore della proprietà song.
+     * Recupera il valore della proprieta song.
      * 
      * @return
      *     possible object is
@@ -114,7 +114,7 @@ public class UserLikes {
     }
 
     /**
-     * Imposta il valore della proprietà song.
+     * Imposta il valore della proprieta song.
      * 
      * @param value
      *     allowed object is
@@ -126,7 +126,7 @@ public class UserLikes {
     }
 
     /**
-     * Recupera il valore della proprietà user.
+     * Recupera il valore della proprieta user.
      * 
      * @return
      *     possible object is
@@ -138,7 +138,7 @@ public class UserLikes {
     }
 
     /**
-     * Imposta il valore della proprietà user.
+     * Imposta il valore della proprieta user.
      * 
      * @param value
      *     allowed object is

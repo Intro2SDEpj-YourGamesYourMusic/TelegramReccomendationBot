@@ -47,7 +47,7 @@ public class Song {
     protected List<UserLikes> userLikes;
 
     /**
-     * Recupera il valore della proprietà artistName.
+     * Recupera il valore della proprieta artistName.
      * 
      * @return
      *     possible object is
@@ -59,7 +59,7 @@ public class Song {
     }
 
     /**
-     * Imposta il valore della proprietà artistName.
+     * Imposta il valore della proprieta artistName.
      * 
      * @param value
      *     allowed object is
@@ -71,7 +71,7 @@ public class Song {
     }
 
     /**
-     * Recupera il valore della proprietà idSong.
+     * Recupera il valore della proprieta idSong.
      * 
      * @return
      *     possible object is
@@ -83,7 +83,7 @@ public class Song {
     }
 
     /**
-     * Imposta il valore della proprietà idSong.
+     * Imposta il valore della proprieta idSong.
      * 
      * @param value
      *     allowed object is
@@ -95,7 +95,7 @@ public class Song {
     }
 
     /**
-     * Recupera il valore della proprietà name.
+     * Recupera il valore della proprieta name.
      * 
      * @return
      *     possible object is
@@ -107,7 +107,7 @@ public class Song {
     }
 
     /**
-     * Imposta il valore della proprietà name.
+     * Imposta il valore della proprieta name.
      * 
      * @param value
      *     allowed object is

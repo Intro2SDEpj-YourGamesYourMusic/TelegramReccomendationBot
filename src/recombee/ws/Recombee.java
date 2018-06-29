@@ -29,33 +29,18 @@ public interface Recombee {
 
     /**
      * 
-     * @param name
+     * @param user
      * @return
-     *     returns java.util.List<game.soap.ws.Game>
+     *     returns boolean
      */
     @WebMethod
-    @WebResult(name = "games", targetNamespace = "")
-    @RequestWrapper(localName = "findGame", targetNamespace = "http://ws.recombee/", className = "recombee.ws.FindGame")
-    @ResponseWrapper(localName = "findGameResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.FindGameResponse")
-    @Action(input = "http://ws.recombee/Recombee/findGameRequest", output = "http://ws.recombee/Recombee/findGameResponse")
-    public List<Game> findGame(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
-
-    /**
-     * 
-     * @param name
-     * @return
-     *     returns java.util.List<java.lang.Object>
-     */
-    @WebMethod
-    @WebResult(name = "obcjects", targetNamespace = "")
-    @RequestWrapper(localName = "randomUserByItem", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RandomUserByItem")
-    @ResponseWrapper(localName = "randomUserByItemResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RandomUserByItemResponse")
-    @Action(input = "http://ws.recombee/Recombee/randomUserByItemRequest", output = "http://ws.recombee/Recombee/randomUserByItemResponse")
-    public List<Object> randomUserByItem(
-        @WebParam(name = "name", targetNamespace = "")
-        String name);
+    @WebResult(name = "result", targetNamespace = "")
+    @RequestWrapper(localName = "registerUser", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RegisterUser")
+    @ResponseWrapper(localName = "registerUserResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RegisterUserResponse")
+    @Action(input = "http://ws.recombee/Recombee/registerUserRequest", output = "http://ws.recombee/Recombee/registerUserResponse")
+    public boolean registerUser(
+        @WebParam(name = "user", targetNamespace = "")
+        String user);
 
     /**
      * 
@@ -107,6 +92,39 @@ public interface Recombee {
         String user,
         @WebParam(name = "appId", targetNamespace = "")
         long appId);
+
+    /**
+     * 
+     * @param appId
+     * @param user
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(name = "result", targetNamespace = "")
+    @RequestWrapper(localName = "deletePurchase", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeletePurchase")
+    @ResponseWrapper(localName = "deletePurchaseResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeletePurchaseResponse")
+    @Action(input = "http://ws.recombee/Recombee/deletePurchaseRequest", output = "http://ws.recombee/Recombee/deletePurchaseResponse")
+    public boolean deletePurchase(
+        @WebParam(name = "user", targetNamespace = "")
+        String user,
+        @WebParam(name = "appId", targetNamespace = "")
+        long appId);
+
+    /**
+     * 
+     * @param user
+     * @return
+     *     returns java.util.List<game.soap.ws.Game>
+     */
+    @WebMethod
+    @WebResult(name = "games", targetNamespace = "")
+    @RequestWrapper(localName = "showPurchases", targetNamespace = "http://ws.recombee/", className = "recombee.ws.ShowPurchases")
+    @ResponseWrapper(localName = "showPurchasesResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.ShowPurchasesResponse")
+    @Action(input = "http://ws.recombee/Recombee/showPurchasesRequest", output = "http://ws.recombee/Recombee/showPurchasesResponse")
+    public List<Game> showPurchases(
+        @WebParam(name = "user", targetNamespace = "")
+        String user);
 
     /**
      * 
@@ -215,21 +233,6 @@ public interface Recombee {
 
     /**
      * 
-     * @param user
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(name = "result", targetNamespace = "")
-    @RequestWrapper(localName = "registerUser", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RegisterUser")
-    @ResponseWrapper(localName = "registerUserResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RegisterUserResponse")
-    @Action(input = "http://ws.recombee/Recombee/registerUserRequest", output = "http://ws.recombee/Recombee/registerUserResponse")
-    public boolean registerUser(
-        @WebParam(name = "user", targetNamespace = "")
-        String user);
-
-    /**
-     * 
      * @return
      *     returns java.util.List<game.soap.ws.Game>
      */
@@ -239,39 +242,6 @@ public interface Recombee {
     @ResponseWrapper(localName = "randomGamesResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RandomGamesResponse")
     @Action(input = "http://ws.recombee/Recombee/randomGamesRequest", output = "http://ws.recombee/Recombee/randomGamesResponse")
     public List<Game> randomGames();
-
-    /**
-     * 
-     * @param appId
-     * @param user
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(name = "result", targetNamespace = "")
-    @RequestWrapper(localName = "deletePurchase", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeletePurchase")
-    @ResponseWrapper(localName = "deletePurchaseResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeletePurchaseResponse")
-    @Action(input = "http://ws.recombee/Recombee/deletePurchaseRequest", output = "http://ws.recombee/Recombee/deletePurchaseResponse")
-    public boolean deletePurchase(
-        @WebParam(name = "user", targetNamespace = "")
-        String user,
-        @WebParam(name = "appId", targetNamespace = "")
-        long appId);
-
-    /**
-     * 
-     * @param user
-     * @return
-     *     returns java.util.List<game.soap.ws.Game>
-     */
-    @WebMethod
-    @WebResult(name = "games", targetNamespace = "")
-    @RequestWrapper(localName = "showPurchases", targetNamespace = "http://ws.recombee/", className = "recombee.ws.ShowPurchases")
-    @ResponseWrapper(localName = "showPurchasesResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.ShowPurchasesResponse")
-    @Action(input = "http://ws.recombee/Recombee/showPurchasesRequest", output = "http://ws.recombee/Recombee/showPurchasesResponse")
-    public List<Game> showPurchases(
-        @WebParam(name = "user", targetNamespace = "")
-        String user);
 
     /**
      * 
@@ -290,5 +260,50 @@ public interface Recombee {
         long appId,
         @WebParam(name = "name", targetNamespace = "")
         String name);
+
+    /**
+     * 
+     * @param name
+     * @return
+     *     returns java.util.List<game.soap.ws.Game>
+     */
+    @WebMethod
+    @WebResult(name = "games", targetNamespace = "")
+    @RequestWrapper(localName = "findGame", targetNamespace = "http://ws.recombee/", className = "recombee.ws.FindGame")
+    @ResponseWrapper(localName = "findGameResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.FindGameResponse")
+    @Action(input = "http://ws.recombee/Recombee/findGameRequest", output = "http://ws.recombee/Recombee/findGameResponse")
+    public List<Game> findGame(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
+
+    /**
+     * 
+     * @param name
+     * @return
+     *     returns java.util.List<java.lang.Object>
+     */
+    @WebMethod
+    @WebResult(name = "obcjects", targetNamespace = "")
+    @RequestWrapper(localName = "randomUserByItem", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RandomUserByItem")
+    @ResponseWrapper(localName = "randomUserByItemResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.RandomUserByItemResponse")
+    @Action(input = "http://ws.recombee/Recombee/randomUserByItemRequest", output = "http://ws.recombee/Recombee/randomUserByItemResponse")
+    public List<Object> randomUserByItem(
+        @WebParam(name = "name", targetNamespace = "")
+        String name);
+
+    /**
+     * 
+     * @param user
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(name = "result", targetNamespace = "")
+    @RequestWrapper(localName = "deleteUser", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeleteUser")
+    @ResponseWrapper(localName = "deleteUserResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.DeleteUserResponse")
+    @Action(input = "http://ws.recombee/Recombee/deleteUserRequest", output = "http://ws.recombee/Recombee/deleteUserResponse")
+    public boolean deleteUser(
+        @WebParam(name = "user", targetNamespace = "")
+        String user);
 
 }

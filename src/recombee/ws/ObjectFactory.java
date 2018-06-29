@@ -44,9 +44,11 @@ public class ObjectFactory {
     private final static QName _FindGame_QNAME = new QName("http://ws.recombee/", "findGame");
     private final static QName _AddPurchaseResponse_QNAME = new QName("http://ws.recombee/", "addPurchaseResponse");
     private final static QName _FindGameResponse_QNAME = new QName("http://ws.recombee/", "findGameResponse");
+    private final static QName _DeleteUser_QNAME = new QName("http://ws.recombee/", "deleteUser");
     private final static QName _RegisterUser_QNAME = new QName("http://ws.recombee/", "registerUser");
     private final static QName _ShowRatings_QNAME = new QName("http://ws.recombee/", "showRatings");
     private final static QName _RandomUserByItem_QNAME = new QName("http://ws.recombee/", "randomUserByItem");
+    private final static QName _DeleteUserResponse_QNAME = new QName("http://ws.recombee/", "deleteUserResponse");
     private final static QName _GetReccomendationResponse_QNAME = new QName("http://ws.recombee/", "getReccomendationResponse");
     private final static QName _GetReccomendationByGenre_QNAME = new QName("http://ws.recombee/", "getReccomendationByGenre");
     private final static QName _RandomGamesResponse_QNAME = new QName("http://ws.recombee/", "randomGamesResponse");
@@ -289,6 +291,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DeleteUser }
+     * 
+     */
+    public DeleteUser createDeleteUser() {
+        return new DeleteUser();
+    }
+
+    /**
      * Create an instance of {@link RegisterUser }
      * 
      */
@@ -310,6 +320,14 @@ public class ObjectFactory {
      */
     public RandomUserByItem createRandomUserByItem() {
         return new RandomUserByItem();
+    }
+
+    /**
+     * Create an instance of {@link DeleteUserResponse }
+     * 
+     */
+    public DeleteUserResponse createDeleteUserResponse() {
+        return new DeleteUserResponse();
     }
 
     /**
@@ -501,6 +519,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.recombee/", name = "deleteUser")
+    public JAXBElement<DeleteUser> createDeleteUser(DeleteUser value) {
+        return new JAXBElement<DeleteUser>(_DeleteUser_QNAME, DeleteUser.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RegisterUser }{@code >}}
      * 
      */
@@ -525,6 +552,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.recombee/", name = "randomUserByItem")
     public JAXBElement<RandomUserByItem> createRandomUserByItem(RandomUserByItem value) {
         return new JAXBElement<RandomUserByItem>(_RandomUserByItem_QNAME, RandomUserByItem.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.recombee/", name = "deleteUserResponse")
+    public JAXBElement<DeleteUserResponse> createDeleteUserResponse(DeleteUserResponse value) {
+        return new JAXBElement<DeleteUserResponse>(_DeleteUserResponse_QNAME, DeleteUserResponse.class, null, value);
     }
 
     /**

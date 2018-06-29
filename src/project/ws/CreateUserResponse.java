@@ -34,7 +34,7 @@ public class CreateUserResponse {
     protected User user;
 
     /**
-     * Recupera il valore della proprietà user.
+     * Recupera il valore della proprieta user.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class CreateUserResponse {
     }
 
     /**
-     * Imposta il valore della proprietà user.
+     * Imposta il valore della proprieta user.
      * 
      * @param value
      *     allowed object is

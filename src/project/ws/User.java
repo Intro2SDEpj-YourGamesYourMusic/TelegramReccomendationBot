@@ -44,7 +44,7 @@ public class User {
     protected List<UserLikes> userLikes;
 
     /**
-     * Recupera il valore della proprietà chatId.
+     * Recupera il valore della proprieta chatId.
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class User {
     }
 
     /**
-     * Imposta il valore della proprietà chatId.
+     * Imposta il valore della proprieta chatId.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class User {
     }
 
     /**
-     * Recupera il valore della proprietà id.
+     * Recupera il valore della proprieta id.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class User {
     }
 
     /**
-     * Imposta il valore della proprietà id.
+     * Imposta il valore della proprieta id.
      * 
      * @param value
      *     allowed object is

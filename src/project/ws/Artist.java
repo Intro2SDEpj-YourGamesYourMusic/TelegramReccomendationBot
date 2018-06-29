@@ -44,7 +44,7 @@ public class Artist {
     protected List<UserLikes> userLikes;
 
     /**
-     * Recupera il valore della proprietà idArtist.
+     * Recupera il valore della proprieta idArtist.
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class Artist {
     }
 
     /**
-     * Imposta il valore della proprietà idArtist.
+     * Imposta il valore della proprieta idArtist.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class Artist {
     }
 
     /**
-     * Recupera il valore della proprietà name.
+     * Recupera il valore della proprieta name.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class Artist {
     }
 
     /**
-     * Imposta il valore della proprietà name.
+     * Imposta il valore della proprieta name.
      * 
      * @param value
      *     allowed object is

@@ -3,26 +3,66 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>app.bot</groupId>
-    <version>1.0</version>
-    <artifactId>Main</artifactId>
-    
+    <groupId>bot.main</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <artifactId>telegrambot</artifactId>
+    <packaging>war</packaging>
+  <dependencies>
+		  <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+		<dependency>
+		    <groupId>javax.ws.rs</groupId>
+		    <artifactId>javax.ws.rs-api</artifactId>
+		    <version>2.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.recombee/api-client -->
+		<dependency>
+		    <groupId>com.recombee</groupId>
+		    <artifactId>api-client</artifactId>
+		    <version>1.6.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.telegram/telegrambots -->
+		<dependency>
+		    <groupId>org.telegram</groupId>
+		    <artifactId>telegrambots</artifactId>
+		    <version>3.5</version>
+		</dependency>
+  </dependencies>
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.4</version>
-            <configuration>
-                <archive>
-                    <index>true</index>
-                    <manifest>
-                        <mainClass>app.bot.Main</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
-     </plugins>
-  </build>
-    
+        <plugins>
+       <!--  <plugin>
+    <artifactId>maven-war-plugin</artifactId>
+    <configuration>
+        <attachClasses>true</attachClasses>
+        <webXml>target/telegrambot-1.0-SNAPSHOT/WEB-INF/web.xml</webXml>
+        <webResources>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>true</filtering>
+            </resource>
+        </webResources>
+    </configuration>
+</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.2</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>8.5.31.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

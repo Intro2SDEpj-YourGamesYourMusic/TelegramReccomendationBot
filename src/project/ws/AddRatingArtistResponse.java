@@ -36,7 +36,7 @@ public class AddRatingArtistResponse {
     protected int _int;
 
     /**
-     * Recupera il valore della proprietà int.
+     * Recupera il valore della proprieta int.
      * 
      */
     public int getInt() {
@@ -44,7 +44,7 @@ public class AddRatingArtistResponse {
     }
 
     /**
-     * Imposta il valore della proprietà int.
+     * Imposta il valore della proprieta int.
      * 
      */
     public void setInt(int value) {
