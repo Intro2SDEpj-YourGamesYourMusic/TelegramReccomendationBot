@@ -50,7 +50,7 @@
             <assembleDirectory>target</assembleDirectory>
             <programs>
                 <program>
-                    <mainClass>Main</mainClass>
+                    <mainClass>bot.main.Main</mainClass>
                     <name>worker</name>
                 </program>
             </programs>
