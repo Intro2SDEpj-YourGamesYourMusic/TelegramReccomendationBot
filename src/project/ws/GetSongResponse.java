@@ -34,7 +34,7 @@ public class GetSongResponse {
     protected Song song;
 
     /**
-     * Recupera il valore della proprieta song.
+     * Recupera il valore della proprietà song.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class GetSongResponse {
     }
 
     /**
-     * Imposta il valore della proprieta song.
+     * Imposta il valore della proprietà song.
      * 
      * @param value
      *     allowed object is

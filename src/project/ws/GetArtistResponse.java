@@ -34,7 +34,7 @@ public class GetArtistResponse {
     protected Artist artist;
 
     /**
-     * Recupera il valore della proprieta artist.
+     * Recupera il valore della proprietà artist.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class GetArtistResponse {
     }
 
     /**
-     * Imposta il valore della proprieta artist.
+     * Imposta il valore della proprietà artist.
      * 
      * @param value
      *     allowed object is

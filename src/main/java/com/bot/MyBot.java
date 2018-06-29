@@ -1,4 +1,4 @@
-package com.bot;
+package main.java.com.bot;
 
 import java.util.ArrayList;
 import java.util.List;

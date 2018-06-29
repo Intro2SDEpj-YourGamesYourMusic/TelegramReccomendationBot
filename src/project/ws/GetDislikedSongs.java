@@ -34,7 +34,7 @@ public class GetDislikedSongs {
     protected User arg0;
 
     /**
-     * Recupera il valore della proprieta arg0.
+     * Recupera il valore della proprietà arg0.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class GetDislikedSongs {
     }
 
     /**
-     * Imposta il valore della proprieta arg0.
+     * Imposta il valore della proprietà arg0.
      * 
      * @param value
      *     allowed object is

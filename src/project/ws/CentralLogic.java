@@ -354,18 +354,6 @@ public interface CentralLogic {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<project.ws.Song>
-     */
-    @WebMethod
-    @WebResult(name = "songs", targetNamespace = "")
-    @RequestWrapper(localName = "initSongs", targetNamespace = "http://ws.project/", className = "project.ws.InitSongs")
-    @ResponseWrapper(localName = "initSongsResponse", targetNamespace = "http://ws.project/", className = "project.ws.InitSongsResponse")
-    @Action(input = "http://ws.project/CentralLogic/initSongsRequest", output = "http://ws.project/CentralLogic/initSongsResponse")
-    public List<Song> initSongs();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns java.util.List<project.ws.Song>
@@ -378,6 +366,18 @@ public interface CentralLogic {
     public List<Song> getRecommendation(
         @WebParam(name = "arg0", targetNamespace = "")
         User arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<project.ws.Song>
+     */
+    @WebMethod
+    @WebResult(name = "songs", targetNamespace = "")
+    @RequestWrapper(localName = "initSongs", targetNamespace = "http://ws.project/", className = "project.ws.InitSongs")
+    @ResponseWrapper(localName = "initSongsResponse", targetNamespace = "http://ws.project/", className = "project.ws.InitSongsResponse")
+    @Action(input = "http://ws.project/CentralLogic/initSongsRequest", output = "http://ws.project/CentralLogic/initSongsResponse")
+    public List<Song> initSongs();
 
     /**
      * 

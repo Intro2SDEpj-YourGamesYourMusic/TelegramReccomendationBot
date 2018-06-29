@@ -36,7 +36,7 @@ public class DeleteUserResponse {
     protected int _int;
 
     /**
-     * Recupera il valore della proprieta int.
+     * Recupera il valore della proprietà int.
      * 
      */
     public int getInt() {
@@ -44,7 +44,7 @@ public class DeleteUserResponse {
     }
 
     /**
-     * Imposta il valore della proprieta int.
+     * Imposta il valore della proprietà int.
      * 
      */
     public void setInt(int value) {

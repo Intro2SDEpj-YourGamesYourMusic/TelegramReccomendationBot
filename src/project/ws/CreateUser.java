@@ -37,7 +37,7 @@ public class CreateUser {
     protected String arg1;
 
     /**
-     * Recupera il valore della proprieta arg0.
+     * Recupera il valore della proprietà arg0.
      * 
      * @return
      *     possible object is
@@ -49,7 +49,7 @@ public class CreateUser {
     }
 
     /**
-     * Imposta il valore della proprieta arg0.
+     * Imposta il valore della proprietà arg0.
      * 
      * @param value
      *     allowed object is
@@ -61,7 +61,7 @@ public class CreateUser {
     }
 
     /**
-     * Recupera il valore della proprieta arg1.
+     * Recupera il valore della proprietà arg1.
      * 
      * @return
      *     possible object is
@@ -73,7 +73,7 @@ public class CreateUser {
     }
 
     /**
-     * Imposta il valore della proprieta arg1.
+     * Imposta il valore della proprietà arg1.
      * 
      * @param value
      *     allowed object is

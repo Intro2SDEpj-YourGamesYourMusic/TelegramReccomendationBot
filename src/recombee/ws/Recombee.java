@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
+
 import game.soap.ws.Game;
 
 
@@ -21,7 +22,7 @@ import game.soap.ws.Game;
  */
 @WebService(name = "Recombee", targetNamespace = "http://ws.recombee/")
 @XmlSeeAlso({
-    game.soap.ws.ObjectFactory.class,
+	game.soap.ws.ObjectFactory.class,
     recombee.ws.ObjectFactory.class
 })
 public interface Recombee {
@@ -44,6 +45,21 @@ public interface Recombee {
 
     /**
      * 
+     * @param user
+     * @return
+     *     returns java.util.List<game.soap.ws.Game>
+     */
+    @WebMethod
+    @WebResult(name = "games", targetNamespace = "")
+    @RequestWrapper(localName = "getReccomendation", targetNamespace = "http://ws.recombee/", className = "recombee.ws.GetReccomendation")
+    @ResponseWrapper(localName = "getReccomendationResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.GetReccomendationResponse")
+    @Action(input = "http://ws.recombee/Recombee/getReccomendationRequest", output = "http://ws.recombee/Recombee/getReccomendationResponse")
+    public List<Game> getReccomendation(
+        @WebParam(name = "user", targetNamespace = "")
+        String user);
+
+    /**
+     * 
      * @param genre
      * @param user
      * @return
@@ -59,21 +75,6 @@ public interface Recombee {
         String user,
         @WebParam(name = "genre", targetNamespace = "")
         String genre);
-
-    /**
-     * 
-     * @param user
-     * @return
-     *     returns java.util.List<game.soap.ws.Game>
-     */
-    @WebMethod
-    @WebResult(name = "games", targetNamespace = "")
-    @RequestWrapper(localName = "getReccomendation", targetNamespace = "http://ws.recombee/", className = "recombee.ws.GetReccomendation")
-    @ResponseWrapper(localName = "getReccomendationResponse", targetNamespace = "http://ws.recombee/", className = "recombee.ws.GetReccomendationResponse")
-    @Action(input = "http://ws.recombee/Recombee/getReccomendationRequest", output = "http://ws.recombee/Recombee/getReccomendationResponse")
-    public List<Game> getReccomendation(
-        @WebParam(name = "user", targetNamespace = "")
-        String user);
 
     /**
      * 

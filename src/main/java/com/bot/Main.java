@@ -1,4 +1,4 @@
-package com.bot;
+package main.java.com.bot;
 import java.util.Timer;
 import java.util.TimerTask;
 
