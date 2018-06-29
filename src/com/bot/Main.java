@@ -1,3 +1,4 @@
+package com.bot;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -32,6 +33,8 @@ public class Main {
             timer.scheduleAtFixedRate(t, 0, minutes*60*1000);
         } catch (TelegramApiException e) {
             e.printStackTrace();
+
+            System.out.println("Crash");
         }
     }
 }
