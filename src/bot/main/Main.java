@@ -24,7 +24,7 @@ public class Main {
 	
 	public static void main(String[] args) {	
         ApiContextInitializer.init();
-        
+       
         try {
         	myBot = new MyBot();
             telegramBotsApi.registerBot(myBot);
