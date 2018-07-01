@@ -999,6 +999,7 @@ public class MyBot extends TelegramLongPollingBot{
 	public void TimerTaskReccomandation() {
 		List<User> users = musicservice.getAllUser();
 		for(User user : users) {
+			System.out.println(user.getId());
 			long chatId = Long.parseLong(user.getChatId());
 			List<Game> games = recombee.showBookmarks(user.getId());
 			if(games.size()<1)

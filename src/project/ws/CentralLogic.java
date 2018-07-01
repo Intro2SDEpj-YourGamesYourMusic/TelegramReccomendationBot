@@ -41,21 +41,6 @@ public interface CentralLogic {
      * 
      * @param arg0
      * @return
-     *     returns project.ws.User
-     */
-    @WebMethod
-    @WebResult(name = "user", targetNamespace = "")
-    @RequestWrapper(localName = "getUser", targetNamespace = "http://ws.project/", className = "project.ws.GetUser")
-    @ResponseWrapper(localName = "getUserResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetUserResponse")
-    @Action(input = "http://ws.project/CentralLogic/getUserRequest", output = "http://ws.project/CentralLogic/getUserResponse")
-    public User getUser(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
      *     returns int
      */
     @WebMethod
@@ -66,6 +51,21 @@ public interface CentralLogic {
     public int deleteUser(
         @WebParam(name = "arg0", targetNamespace = "")
         User arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns project.ws.User
+     */
+    @WebMethod
+    @WebResult(name = "user", targetNamespace = "")
+    @RequestWrapper(localName = "getUser", targetNamespace = "http://ws.project/", className = "project.ws.GetUser")
+    @ResponseWrapper(localName = "getUserResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetUserResponse")
+    @Action(input = "http://ws.project/CentralLogic/getUserRequest", output = "http://ws.project/CentralLogic/getUserResponse")
+    public User getUser(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
     /**
      * 
@@ -91,6 +91,21 @@ public interface CentralLogic {
     @ResponseWrapper(localName = "getArtistResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetArtistResponse")
     @Action(input = "http://ws.project/CentralLogic/getArtistRequest", output = "http://ws.project/CentralLogic/getArtistResponse")
     public Artist getArtist(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns project.ws.Artist
+     */
+    @WebMethod
+    @WebResult(name = "artist", targetNamespace = "")
+    @RequestWrapper(localName = "getArtistById", targetNamespace = "http://ws.project/", className = "project.ws.GetArtistById")
+    @ResponseWrapper(localName = "getArtistByIdResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetArtistByIdResponse")
+    @Action(input = "http://ws.project/CentralLogic/getArtistByIdRequest", output = "http://ws.project/CentralLogic/getArtistByIdResponse")
+    public Artist getArtistById(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
 
@@ -133,6 +148,21 @@ public interface CentralLogic {
     @ResponseWrapper(localName = "getSongResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetSongResponse")
     @Action(input = "http://ws.project/CentralLogic/getSongRequest", output = "http://ws.project/CentralLogic/getSongResponse")
     public Song getSong(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns project.ws.Song
+     */
+    @WebMethod
+    @WebResult(name = "song", targetNamespace = "")
+    @RequestWrapper(localName = "getSongById", targetNamespace = "http://ws.project/", className = "project.ws.GetSongById")
+    @ResponseWrapper(localName = "getSongByIdResponse", targetNamespace = "http://ws.project/", className = "project.ws.GetSongByIdResponse")
+    @Action(input = "http://ws.project/CentralLogic/getSongByIdRequest", output = "http://ws.project/CentralLogic/getSongByIdResponse")
+    public Song getSongById(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
 
